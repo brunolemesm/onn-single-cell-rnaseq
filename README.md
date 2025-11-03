@@ -6,7 +6,7 @@ End-to-end single-cell RNA-seq analysis pipeline in R, integrating Seurat, Harmo
 
 [![Made with R](https://img.shields.io/badge/Made%20with-R-blue?logo=r)](https://www.r-project.org/)
 [![Seurat](https://img.shields.io/badge/Seurat-%3E%3D5.0-orange)](https://satijalab.org/seurat/)
-[![GPTCelltype](https://img.shields.io/badge/Cell%20Annotation-GPTCelltype-8A2BE2)](https://github.com/)
+[![GPTCelltype](https://img.shields.io/badge/Cell%20Annotation-GPTCelltype-8A2BE2)](https://winnie09.github.io/Wenpin_Hou/pages/gptcelltype.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 This repository provides a comprehensive and reproducible workflow for single-cell RNA sequencing (scRNA-seq) analysis in **R**.  
