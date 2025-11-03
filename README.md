@@ -23,3 +23,65 @@ It includes:
 - Cell–cell communication network analysis with CellChat  
 
 **Goal:** Provide an automated, end-to-end workflow from raw 10X Genomics `.h5` files to biologically interpretable results.
+
+## 🚀 Quick Start / How to Run
+
+Follow these steps to run the single-cell RNA-seq pipeline locally.
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/seu-usuario/scRNAseq_pipeline_seurat_GPTCelltype.git
+cd scRNAseq_pipeline_seurat_GPTCelltype
+```
+
+### 2️⃣ Install R and required packages
+
+Make sure you have R >= 4.3 installed. Then install the required packages:
+```r
+install.packages(c("Seurat", "dplyr", "ggplot2", "patchwork", "tidyverse", "Matrix", "readxl", "openxlsx", "scales"))
+BiocManager::install(c("SingleR", "org.Hs.eg.db", "ReactomePA", "clusterProfiler"))
+install.packages(c("speckle", "EnhancedVolcano", "NMF", "ggalluvial", "pheatmap"))
+# GPTCelltype should be installed according to its instructions
+```
+
+### 3️⃣ Prepare input data
+
+Place your 10X Genomics filtered feature matrix .h5 files in a folder, e.g., data/.
+
+Update the files vector in the R script to point to the correct paths:
+
+```r
+
+files <- c(
+  "data/filtered_feature_bc_matrix_1.h5",
+  "data/filtered_feature_bc_matrix_2.h5"
+)
+```
+### 4️⃣ Run the pipeline
+
+Open the main R script (scRNAseq_pipeline_seurat_GPTCelltype.R) and run it in R or RStudio:
+
+```r
+
+source("scRNAseq_pipeline_seurat_GPTCelltype.R")
+
+```
+
+### 5️⃣ Outputs
+
+The pipeline generates:
+
+QC plots (violin plots, barplots)
+
+UMAPs by group, sample, and clusters
+
+Differential expression results (xlsx)
+
+Functional enrichment plots (GO, Reactome)
+
+Cell-cell communication visualizations (CellChat)
+
+DotPlots and heatmaps
+
+All outputs are saved in the working directory or outputs/ folder (if created).
